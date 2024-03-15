@@ -21,9 +21,13 @@ for (let i = 0; i < 5; i++) {
     let height = 82.5;
     let gap = 21;
     let x = 100 + (width + gap) * i
-    let y = 100 + (height + gap) * i;
+    let y = 100 + (height + gap) * i
 
     context.beginPath();
     context.rect(x + context.lineWidth / 2, y + context.lineWidth / 2, width, height);
+    context.stroke();
+
+    context.beginPath();
+    context.rect(x + 12 + context.lineWidth / 2, y + 12 + context.lineWidth / 2, width - 24, height - 24);
     context.stroke();
 }
